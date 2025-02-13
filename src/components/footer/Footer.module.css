@@ -1,0 +1,181 @@
+/* General Container */
+.container {
+  font-family: Arial, sans-serif;
+  background-color: #fdeff4;
+  min-height: 100vh;
+  padding-top: 72px; /* Ensures content starts below the fixed navbar */
+}
+
+/* Carousel Section */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  background-color: #fdeff4;
+}
+
+.carouselSlide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* Ensures images fit well */
+}
+
+.message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #c2185b;
+  margin-top: 10px;
+}
+
+/* Progress Indicators */
+.progressBoxContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.progressBox {
+  width: 12px;
+  height: 12px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.progressBox.active {
+  background-color: #c2185b;
+}
+
+/* Section Styling */
+.section {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  font-size: 20px;
+  color: #c2185b;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.emptyText {
+  color: #999;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Card Styling */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardDetails {
+  padding: 16px;
+  text-align: center;
+}
+
+.cardDetails h3 {
+  font-size: 18px;
+  color: #c2185b;
+  margin-bottom: 5px;
+}
+
+.cardDate {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.cardTag {
+  background-color: white;
+  color: #ff5c5c;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: solid 1px #ff5c5c;
+}
+
+/* Plan Button Styling */
+.planButton {
+  padding: 6px 17px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.planButton:hover {
+  background-color: #ee4266;
+}
+
+/* Responsive Grid for Cards */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer Padding */
+.footer {
+  padding: 20px 0;
+  background-color: #fff;
+  color: #c2185b;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Navbar Padding Fix */
+.navbarSpacer {
+  height: 72px;
+}

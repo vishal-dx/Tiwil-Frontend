@@ -1,0 +1,112 @@
+/* Notifications.module.css */
+.pageContainer {
+    padding-top: 60px; /* Ensure content doesn't go behind the navbar */
+  }
+  
+  .container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+  }
+  
+  .header {
+    text-align: center;
+    color: #c2185b;
+    margin-bottom: 40px;
+    font-size: 2rem;
+  }
+  
+  .notificationList {
+    margin-top: 20px;
+  }
+  
+  .notificationItem {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .notificationText {
+    display: flex;
+    align-items: center;
+  }
+  
+  .imageWrapper {
+    margin-right: 15px;
+  }
+  
+  .profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .textWrapper {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .textWrapper p {
+    color: #888;
+    font-size: 0.875rem;
+    margin: 5px 0 0 0;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .rejectButton, .acceptButton {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .rejectButton {
+    background-color: #fff;
+    border: 1px solid #ff5c5c;
+    color: #ff5c5c;
+  }
+  
+  .acceptButton {
+    background-color: #ff5c5c;
+    border: 1px solid #ff5c5c;
+    color: white;
+  }
+  
+  .rejectButton:hover {
+    background-color: #ffb6b6;
+  }
+  
+  .acceptButton:hover {
+    background-color: #ff1e1e;
+  }
+  
+  @media (max-width: 768px) {
+    .notificationItem {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .rejectButton, .acceptButton {
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+  

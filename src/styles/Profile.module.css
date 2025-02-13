@@ -1,0 +1,177 @@
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profileImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profileImage {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.uploadButton {
+  padding: 8px 16px;
+  background-color: #ff5c5c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.uploadButton:hover {
+  background-color: #e64747;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.formGroup select {
+  appearance: none;
+}
+
+.formGroup input[disabled],
+.formGroup select[disabled] {
+  background-color: #f5f5f5;
+  color: #aaa;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff5c5c;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e64747;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.section h3 {
+  font-size: 18px;
+  color: #ff5c5c;
+  margin-bottom: 10px;
+}
+
+.siblingForm,
+.childForm {
+  margin-top: 10px;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.siblingForm input,
+.childForm input,
+.siblingForm select,
+.childForm select {
+  margin-bottom: 10px;
+}
+
+.addButton {
+  padding: 8px 16px;
+  background-color: #5cb85c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.addButton:hover {
+  background-color: #4cae4c;
+}
+
+.removeButton {
+  padding: 6px 12px;
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.removeButton:hover {
+  background-color: #c9302c;
+}
+.saveBtnBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Save Button */
+.saveButton {
+  width: 50%;
+  padding: 14px;
+  background: linear-gradient(135deg, #ff5c5c 0%, #ff5c5c 100%); /* Gradient pink */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+
+.saveButton:hover {
+  background-color: #e64747;
+}

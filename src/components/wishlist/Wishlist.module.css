@@ -1,0 +1,56 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fdeff4;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .backButton {
+    background: none;
+    border: none;
+    color: #EE4266;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* No Wishlist Message */
+  .noWishlist p {
+    font-size: 24px;
+    color: #f8bbd0;
+    margin-top: 50px;
+  }
+  
+  /* Button */
+  .buttonContainer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+  
+  .addWishlist {
+    background-color: #EE4266;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .addWishlist:hover {
+    background-color: #d81b5e;
+  }
+  

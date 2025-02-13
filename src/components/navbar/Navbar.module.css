@@ -1,0 +1,181 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.navLogo {
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Desktop Buttons */
+.navButtons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navButtons button {
+  background-color: #ee4266;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.navButtons button:hover {
+  background-color: #d93e5f;
+}
+
+/* Profile Section */
+.profileContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 29px;
+}
+
+.profileIcon {
+  width: 32px;
+  height: 32px;
+  color: #ee4266;
+}
+
+.profileName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Dropdown Menu */
+.dropdownMenu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  width: 150px;
+  padding: 10px;
+  z-index: 100;
+  text-align: center;
+}
+
+.dropdownMenu p {
+  padding: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.dropdownMenu p:hover {
+  background-color: #ee4266;
+  color: white;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: #ee4266;
+  margin-right: 37px;
+}
+
+/* Side Panel */
+.sidePanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  height: 100%;
+  width: 88px;
+  background-color: #ffffff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 20px;
+  gap: 0px;
+  z-index: 2000;
+}
+
+.sidePanel p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+}
+
+.sidePanel p:hover {
+  color: #ee4266;
+}
+
+/* Overlay for Side Panel */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1999;
+}
+
+/* Media Query for Mobile Screens */
+@media screen and (max-width: 768px) {
+  .navButtons {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Buttons Container */
+.btns {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.signInbtn button,
+.signUpbtn button {
+  background-color: #ee4266;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.signInbtn button:hover,
+.signUpbtn button:hover {
+  background-color: #d93e5f;
+}

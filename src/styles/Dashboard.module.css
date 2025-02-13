@@ -1,0 +1,354 @@
+.dashboard {
+  background-color: #fdeff4;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 16px;
+  max-width: 1200px;
+  margin: 72px auto;
+}
+  
+  h2 {
+    font-size: 24px;
+    color: #c2185b;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+/* Unified Grid Layout for all events */
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+  /* Event Card */
+  .eventCard {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  /* Image Wrapper */
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .eventImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+      }
+  
+  /* Favorite Icon */
+  .favoriteIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #ff5c5c;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .favoriteIcon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Event Details */
+  .eventDetails {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .eventDetails h3 {
+    font-size: 18px;
+    color: #c2185b;
+    margin-bottom: 5px;
+  }
+  
+  .date {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .relationTag {
+    background-color: white;
+    color: #ff5c5c;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: solid #ff5c5c;
+  }
+  
+  .planButton {
+    padding: 6px 17px;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .planButton:hover {
+    background-color: #EE4266;
+  }
+  .plnbox{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  /* Search Bar */
+.searchBar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .searchIcon {
+    font-size: 16px;
+    color: #c2185b;
+  }
+  
+  .filterIcon {
+    font-size: 16px;
+    color: #c2185b;
+    cursor: pointer;
+  }
+  
+  .searchBar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    color: #555;
+  }
+   .tabContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line if necessary */
+    margin-bottom: 16px;
+    gap: 8px; /* Adds spacing between buttons */
+  }
+  
+  .tabContainer button {
+    padding: 8px 16px;
+    margin: 0;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #fce4ec;
+    color: #c2185b;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for buttons */
+  .tabContainer button:hover {
+    background-color: #ff5c5c;
+    color: white;
+  }
+  
+  .activeTab {
+    background-color: #ff5c5c;
+    color: white;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 480px) {
+    .tabContainer {
+      flex-direction: column; /* Stacks buttons vertically */
+      align-items: center;
+    }
+  
+    .tabContainer button {
+      width: 100%; /* Make buttons take up full width */
+      max-width: 200px; /* Optional: Limit button width */
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+  
+  /* Add hover effect for filter icon */
+  .filterIcon:hover {
+    color: #ff5c5c;
+  }
+  
+  /* Responsive Search Bar */
+  @media (max-width: 480px) {
+    .searchBar {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  
+    .searchBar input {
+      width: 100%;
+    }
+  }
+ 
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .eventGrid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .eventGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .loader {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c2185b;
+    margin-top: 20px;
+  }
+  .noEvents {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+  }
+
+
+  .dashboard {
+    background-color: #fdeff4;
+    min-height: 100vh;
+  }
+  
+  .container {
+    padding: 16px;
+    max-width: 1200px;
+    margin: 72px auto;
+  }
+  
+  /* Loader */
+  .loader {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c2185b;
+    margin-top: 20px;
+  }
+  
+  /* No Events Found */
+  .noEvents {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+  }
+  
+  /* Floating Button Container (Fixed at Bottom-Right) */
+.floatingContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Floating Add Button */
+.floatingButton {
+  width: 55px;
+  height: 55px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  position: relative;  /* Ensure it stays in place */
+}
+
+.floatingButton:hover {
+  background-color: #e64747;
+  transform: scale(1.1);
+}
+
+.floatingButton:active {
+  transform: scale(0.95);
+}
+
+/* Add Member & Event Menu */
+.addOptions {
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute; /* Keeps it in place */
+  bottom: 65px; /* Positions above floating button */
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  animation: fadeIn 0.2s ease-in-out;
+  width: 150px;
+}
+
+.addOptions button {
+  width: 100%;
+  padding: 12px;
+  background: #ff5c5c;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.addOptions button:first-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.addOptions button:hover {
+  background: #e64747;
+}
+
+/* Close Button for Floating Menu */
+.closeAddOptions {
+  width: 35px;
+  height: 35px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.closeAddOptions:hover {
+  background-color: #e64747;
+  transform: scale(1.1);
+}
+
+
+  
