@@ -67,13 +67,13 @@ const SignIn = () => {
         otp: formData.otp,
       });
   
-      if (response.data.success) {
-        Swal.fire({
-          icon: "success",
-          title: "Login Successful!",
-          timer: 1000,
-          showConfirmButton: false,
-        });
+      // if (response.data.success) {
+      //   Swal.fire({
+      //     icon: "success",
+      //     title: "Login Successful!",
+      //     timer: 1000,
+      //     showConfirmButton: false,
+      //   });
   
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("userId", response.data.userId);
@@ -87,15 +87,15 @@ const SignIn = () => {
         } else {
           navigate("/dashboard");
         }
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: response.data.message,
-          timer: 3000,
-          showConfirmButton: false,
-        });
-      }
+      // } else {
+      //   Swal.fire({
+      //     icon: "error",
+      //     title: "Error",
+      //     text: response.data.message,
+      //     timer: 3000,
+      //     showConfirmButton: false,
+      //   });
+      // }
     } catch (error) {
       console.error("Error verifying OTP:", error);
       Swal.fire({

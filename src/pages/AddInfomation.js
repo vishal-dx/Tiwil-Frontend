@@ -205,12 +205,12 @@ function AddInformation() {
       if (response.data.success) {
         console.log("Family information saved successfully!");
         localStorage.setItem("onboardingStatus", true);
-        // navigate("/dashboard");
+        navigate("/dashboard");
       } else {
         console.error("Error saving family information:", response.data.message);
       }
     } catch (error) {
-      console.error("Error saving family information:", error);
+      console.error("Error saving family information:", error.message);
     }
   };
   

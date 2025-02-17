@@ -1,0 +1,66 @@
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ✅ Tabs from Dashboard */
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+
+.tabButton {
+  padding: 8px 16px;
+  margin: 0;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #fce4ec;
+  color: #c2185b;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.tabButton:hover {
+  background-color: #ff5c5c;
+  color: white;
+}
+
+.activeTab {
+  background-color: #ff5c5c;
+  color: white;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #c2185b;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.loadingText,
+.noInvites {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+}
+
+.invitationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .invitationGrid {
+    grid-template-columns: 1fr;
+  }
+}
