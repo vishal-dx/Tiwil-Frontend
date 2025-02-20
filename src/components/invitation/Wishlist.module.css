@@ -1,0 +1,66 @@
+.wishlistContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .wishlistItem {
+    display: flex;
+    align-items: center;
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .wishlistItem:hover {
+    background: #f1f1f1;
+  }
+  
+  .wishlistImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .itemDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .itemName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .itemPrice, .itemDesireRate, .itemDescription, .itemLink {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .itemLink a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .itemLink a:hover {
+    text-decoration: underline;
+  }
+  
+  .icon {
+    margin-right: 5px;
+    color: #ff4d6d;
+  }
+  
+  .loadingText, .noItemsText {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+  }

@@ -10,6 +10,10 @@ import Dashboard from "./pages/Dashboard";
 import EventDetail from "./pages/EventDetail";
 import FamilyInformation from "./pages/FamilyInformation";
 import Notifications from "./pages/Notifications";
+import EventDetails from "./components/invitation/EventDetails";
+import WishlistDetails from "./components/invitation/WishlistDetails";
+import PoolingPage from "./components/invitation/Pooling";
+import InviteUsersPage from "./components/invitation/PoolInvite";
 
 function App() {
   return (
@@ -79,6 +83,26 @@ function App() {
           </ProtectedRoute>
         }
       />
+    {/* For Invitaion view */}
+      <Route
+        path="/event/:eventId"
+        element={
+          <ProtectedRoute>
+            <EventDetails />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/wishlist/:id"
+        element={ 
+          <ProtectedRoute>
+            <WishlistDetails />
+          </ProtectedRoute>
+        }
+      />
+
+<Route path="/pooling" element={  <ProtectedRoute><PoolingPage /></ProtectedRoute>} />
+<Route path="/pool-invite" element={ <ProtectedRoute><InviteUsersPage /></ProtectedRoute>} />
     </Routes>
   );
 }

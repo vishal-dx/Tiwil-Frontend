@@ -32,8 +32,15 @@ console.log(wishlistItems)
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.wishlistTitle}>Wishlist <span className={styles.showAll}>Show all</span></h2>
-
+      {/* <h2 className={styles.wishlistTitle}>Wishlist <span className={styles.showAll}>Show all</span></h2> */}
+      <div className={styles.wishlistTitle}>
+        <h2>
+          Show All
+        </h2>
+        <h2>
+          :
+        </h2>
+        </div>
       {/* Wishlist Items List */}
       <div className={styles.wishlistItems}>
         {wishlistItems.length === 0 ? (
@@ -42,7 +49,12 @@ console.log(wishlistItems)
           wishlistItems.map((item, index) => (
             <div key={index} className={styles.wishlistItem}>
               <div className={styles.wishlistImageContainer}>
-                <img src={`${process.env.REACT_APP_BASE_URL}/${item.imageUrl}`} alt={item.giftName} className={styles.itemImage} />
+                {/* <img src={`${process.env.REACT_APP_BASE_URL}/${item.imageUrl}`} alt={item.giftName} className={styles.itemImage} /> */}
+                {item.imageUrl ? (
+            <img src={`${process.env.REACT_APP_BASE_URL}/${item.imageUrl}`} alt={item.giftName} className={styles.itemImage} />
+          ) : (
+            <img src={`${process.env.PUBLIC_URL}/assets/ProfilDefaulticon.png`} alt={item.giftName} className={styles.itemImage} />
+          )}
               </div>
               <div className={styles.wishlistContent}>
                 <div className={styles.wishlistHeader}>

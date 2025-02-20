@@ -1,0 +1,108 @@
+.card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.completedCard {
+  opacity: 0.6;
+  pointer-events: none; /* Prevents interaction with completed wishes */
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 12px;
+}
+
+.userImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.textContent {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.giftName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.userName {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.description {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.arrowIcon {
+  font-size: 16px;
+}
+
+.completedBadge {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
+.purchasedBadge {
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.markedBadge {
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.unmarkedBadge {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

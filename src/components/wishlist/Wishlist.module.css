@@ -131,3 +131,7 @@
 .addWishlist:hover {
   background-color: #d81b5e;
 }
+.wishlistTitle{
+  display: flex;
+  justify-content: space-between;
+}

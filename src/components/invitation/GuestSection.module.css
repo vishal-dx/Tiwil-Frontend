@@ -1,0 +1,40 @@
+/* GuestSection.module.css */
+
+.container {
+    padding: 20px;
+}
+
+.guestsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.guestItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.guestAvatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.guestName {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.guestStatus {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}

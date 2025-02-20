@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import InvitationCard from "./InvitationCard"; // ✅ Use relative path within the same folder
-import styles from "./Invitations.module.css"; // ✅ Use correct CSS import
+import InvitationCard from "./InvitationCard";
+import styles from "./Invitations.module.css";
 
 const Invitations = () => {
   const [loading, setLoading] = useState(true);

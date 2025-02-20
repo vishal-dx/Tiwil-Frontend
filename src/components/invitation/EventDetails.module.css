@@ -1,0 +1,202 @@
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.backIcon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.eventImageContainer {
+  position: relative;
+}
+
+.eventImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.daysLeft {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff4d6d;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.eventTitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.tabs span {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #777;
+}
+
+.activeTab {
+  border-bottom: 3px solid #ff4d6d;
+  color: #ff4d6d;
+}
+
+/* Tab Content */
+.tabContent {
+  padding: 20px;
+  text-align: left;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #ff4d6d;
+}
+
+/* About Event */
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 15px;
+}
+
+.aboutEvent {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+/* Placeholder for Wishlist & Guests */
+.placeholder {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.accept, .decline {
+  width: 45%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.accept {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+}
+
+.accept:hover {
+  background: #d43f5c;
+}
+
+.decline {
+  background: white;
+  color: #ff4d6d;
+  border: 2px solid #ff4d6d;
+}
+
+.decline:hover {
+  background: #ff4d6d;
+  color: white;
+}
+.chatButton {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+  transition: 0.3s ease-in-out;
+}
+
+.chatButton:hover {
+  background: #ff4d6d;
+}
+
+.chatIcon {
+  font-size: 20px;
+}
+.disabledTab {
+  color: #999;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.tabs span {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #777;
+}
+
+.activeTab {
+  border-bottom: 3px solid #ff4d6d;
+  color: #ff4d6d;
+}

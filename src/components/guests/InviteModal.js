@@ -4,10 +4,10 @@ import Swal from "sweetalert2";
 import styles from "./InviteModal.module.css";
 
 const InviteModal = ({ eventId, onInvite, onClose }) => {
-    const [users, setUsers] = useState([]);
-    const [selectedGuests, setSelectedGuests] = useState([]);
-    const [loading, setLoading] = useState(false); // Prevent multiple requests
-    const token = localStorage.getItem("token");
+  const [users, setUsers] = useState([]);
+  const [selectedGuests, setSelectedGuests] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -20,7 +20,7 @@ const InviteModal = ({ eventId, onInvite, onClose }) => {
           setUsers(response.data.data);
         }
       } catch (error) {
-        console.error("Error fetching users:", error);
+        console.error("❌ Error fetching users:", error);
       }
     };
 
@@ -34,50 +34,24 @@ const InviteModal = ({ eventId, onInvite, onClose }) => {
       setSelectedGuests([...selectedGuests, { ...user, status: "Invited" }]);
     }
   };
-  useEffect(() => {
-    let isMounted = true; // ✅ Prevents duplicate API calls
-  
-    const fetchUsers = async () => {
-      try {
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/users`, {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-  
-        if (response.data && response.data.data && isMounted) {
-          setUsers(response.data.data);
-        }
-      } catch (error) {
-        console.error("❌ Error fetching users:", error);
-      }
-    };
-  
-    fetchUsers();
-  
-    return () => {
-      isMounted = false; // ✅ Cleanup to prevent multiple calls
-    };
-  }, []);
-  
-  
-
 
   const handleSendInvites = async () => {
     if (!eventId || selectedGuests.length === 0) {
       Swal.fire("No guests selected!", "Please select at least one guest to invite.", "warning");
       return;
     }
-  
+
     if (loading) return; // ✅ Prevent duplicate requests
     setLoading(true);
-  
+
     const formattedGuests = selectedGuests.map((guest) => ({
       fullName: guest.fullName,
       phoneNumber: guest.phoneNumber, // ✅ Send phoneNumber
     }));
-  
+
     try {
       console.log("🚀 Sending invite API request:", { eventId, guests: formattedGuests });
-  
+
       const response = await axios.post(
         `${process.env.REACT_APP_BASE_URL}/guests/invite`,
         { eventId, guests: formattedGuests },
@@ -85,7 +59,7 @@ const InviteModal = ({ eventId, onInvite, onClose }) => {
           headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
         }
       );
-  
+
       if (response.data.success) {
         onInvite(response.data.guests);
         Swal.fire("Invites Sent!", "Your guests have been invited successfully.", "success");
@@ -94,14 +68,12 @@ const InviteModal = ({ eventId, onInvite, onClose }) => {
       }
     } catch (error) {
       console.error("❌ Error inviting guests:", error.response?.data || error.message);
-      Swal.fire("Error!", "Something went wrong.", "error");
+      Swal.fire("Error!", `${error.response?.data.message}`, "error");
     } finally {
-      setTimeout(() => setLoading(false), 2000); // ✅ Prevents spam clicking
+      setTimeout(() => setLoading(false), 2000);
     }
   };
-  
-  
- 
+
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalContent}>

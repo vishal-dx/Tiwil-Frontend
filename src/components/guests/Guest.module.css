@@ -1,6 +1,6 @@
 .container {
     padding: 20px;
-    background: #000;
+    background: #fff;
     border-radius: 12px;
     max-width: 450px;
     margin: auto;
@@ -48,7 +48,7 @@
   
   .guestName {
     font-size: 1.1em;
-    color: white;
+    color: black;
     font-weight: 500;
   }
   

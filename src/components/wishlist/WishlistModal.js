@@ -82,7 +82,7 @@ const WishlistModal = ({ closeModal, eventId, refreshWishlist }) => {
           {imageFile ? (
             <img src={imageFile} alt="Wishlist Item" className={styles.wishlistImage} />
           ) : (
-            <img src={`${process.env.PUBLIC_URL}/assets/ps5.png`} alt="Wishlist Item" className={styles.wishlistImage} />
+            <img src={`${process.env.PUBLIC_URL}/assets/ProfilDefaulticon.png`} alt="Wishlist Item" className={styles.wishlistImage} />
           )}
           <input type="file" accept="image/*" onChange={handleImageUpload} className={styles.fileInput} id="fileUpload" />
           <label htmlFor="fileUpload" className={styles.cameraButton}>📷</label>

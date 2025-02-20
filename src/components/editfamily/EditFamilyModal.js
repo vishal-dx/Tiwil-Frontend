@@ -31,7 +31,7 @@ const EditFamilyModal = ({ relation, detail, onClose, onSave }) => {
     if (selectedImage) {
       formData.append("image", selectedImage);
     }
-
+    console.log(detail,'77777777777777777777777777777777777777777777777777777777777777')
     try {
       const response = await axios.put(
         `${process.env.REACT_APP_BASE_URL}/family-info/update/${detail.relationId}`,
